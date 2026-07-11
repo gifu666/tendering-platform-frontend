@@ -1,0 +1,6 @@
+import {Tag} from 'antd';
+type Tone='draft'|'pending'|'active'|'success'|'danger'|'closed';
+const colors:Record<Tone,string>={draft:'default',pending:'orange',active:'blue',success:'green',danger:'red',closed:'default'};
+const statusTone:Record<string,Tone>={DRAFT:'draft',PENDING:'pending',BIDDING:'active',OPENING:'active',EVALUATING:'active',PUBLICITY:'active',COMPLETED:'success',ARCHIVED:'closed',REJECTED:'danger',ABNORMAL:'danger',UNPAID:'draft',PAID:'success',REFUNDED:'closed',APPROVED:'success',SUBMITTED:'success',ENCRYPTED:'success',FAILED:'danger',NOT_UPLOADED:'draft',NOT_STARTED:'draft',SCORING:'active',SIGNED:'success',ACTIVE:'success',DISABLED:'closed'};
+const labels:Record<string,string>={DRAFT:'草稿',PENDING:'待处理',BIDDING:'投标中',OPENING:'开标中',EVALUATING:'评标中',PUBLICITY:'公示中',COMPLETED:'已完成',ARCHIVED:'已归档',REJECTED:'已驳回',ABNORMAL:'异常',UNPAID:'未缴纳',PAID:'已缴纳',REFUNDED:'已退还',APPROVED:'已通过',SUBMITTED:'已提交',ENCRYPTED:'已加密',FAILED:'失败',NOT_UPLOADED:'未上传',NOT_STARTED:'未开始',SCORING:'评分中',SIGNED:'已签到',ACTIVE:'启用',DISABLED:'禁用'};
+export function StatusTag({status,label}:{status:string;label?:string}){return <Tag color={colors[statusTone[status]??'closed']}>{label??labels[status]??status}</Tag>}

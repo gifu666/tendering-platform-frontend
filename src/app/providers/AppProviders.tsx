@@ -1,0 +1,2 @@
+import {App as AntApp,ConfigProvider} from 'antd';import zhCN from 'antd/locale/zh_CN';import {ReactNode} from 'react';
+export function AppProviders({children}:{children:ReactNode}){return <ConfigProvider locale={zhCN} theme={{token:{colorPrimary:'#155eef',borderRadius:8,colorBgLayout:'#f4f6f9',fontFamily:"Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif"},components:{Layout:{headerBg:'#fff',siderBg:'#0b1f3a'},Menu:{darkItemBg:'#0b1f3a',darkItemSelectedBg:'#155eef'},Table:{headerBg:'#f7f9fc',headerColor:'#344054'}}}}><AntApp>{children}</AntApp></ConfigProvider>}
