@@ -1,0 +1,35 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Environment files (commit only the safe template)
+.env
+.env.*
+!.env.example
+
+# Logs and caches
+*.log
+logs/
+.cache/
+cache/
+tmp/
+temp/
+*.tmp
+*.temp
+*.tsbuildinfo
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local certificates and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
